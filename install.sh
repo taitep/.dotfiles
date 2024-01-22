@@ -14,7 +14,7 @@ sudo pacman -S --needed git base-devel pacman-contrib
 cd tmp
 if command -v rustup &> /dev/null; then
 	echo "found rustup, installing ame"
-	git clone https://git.getcryt.al/crystal/pkgbuilds/ame
+	git clone https://git.getcryst.al/crystal/pkgbuilds/ame
 	cd ame && makepkg -si && cd ..
 else
 	echo "rustup is not installed, not installing ame"
@@ -25,3 +25,7 @@ git clone https://aur.archlinux.org/yay-git.git
 cd yay-git && makepkg -si && cd ..
 
 cd ..
+
+echo "Installing fish shell"
+sudo pacman -S fish
+sudo chsh -s /usr/bin/fish $USER
