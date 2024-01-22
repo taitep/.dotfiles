@@ -6,3 +6,5 @@ if [ ! -e /etc/arch-release ]; then
 	exit 1
 fi
 
+mkdir ./tmp
+
